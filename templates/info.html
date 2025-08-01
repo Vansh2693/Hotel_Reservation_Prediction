@@ -1,0 +1,265 @@
+{% extends "base.html" %} {% block title %}Prediction Example Values |
+HotelSys{% endblock %} {% block content %}
+<div class="container info-container">
+  <h2>Example Values for Prediction</h2>
+  <p>
+    Below are example rows. Use these values to understand what to enter for
+    each prediction. Encodings for selection fields are explained below.
+  </p>
+  <div style="overflow-x: auto">
+    <table
+      style="
+        min-width: 1400px;
+        width: 100%;
+        border-collapse: collapse;
+        text-align: center;
+      "
+    >
+      <thead>
+        <tr>
+          <th>Lead Time</th>
+          <th>Special Requests</th>
+          <th>Avg Price / Room</th>
+          <th>Arrival Month</th>
+          <th>Arrival Date</th>
+          <th>Market Segment<br />(encoded)</th>
+          <th>Week Nights</th>
+          <th>Weekend Nights</th>
+          <th>Room Type<br />(encoded)</th>
+          <th>Meal Plan<br />(encoded)</th>
+          <th>Booking Status<br />(encoded)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>3</td>
+          <td>3</td>
+          <td>90.0</td>
+          <td>8</td>
+          <td>23</td>
+          <td>4</td>
+          <td>0</td>
+          <td>1</td>
+          <td>0</td>
+          <td>0</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>0</td>
+          <td>48.67</td>
+          <td>2</td>
+          <td>12</td>
+          <td>3</td>
+          <td>2</td>
+          <td>1</td>
+          <td>3</td>
+          <td>0</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>23</td>
+          <td>0</td>
+          <td>127.67</td>
+          <td>6</td>
+          <td>21</td>
+          <td>4</td>
+          <td>3</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>102</td>
+          <td>0</td>
+          <td>109.0</td>
+          <td>10</td>
+          <td>16</td>
+          <td>3</td>
+          <td>2</td>
+          <td>0</td>
+          <td>0</td>
+          <td>1</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>99</td>
+          <td>0</td>
+          <td>107.1</td>
+          <td>8</td>
+          <td>29</td>
+          <td>4</td>
+          <td>1</td>
+          <td>1</td>
+          <td>0</td>
+          <td>3</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>26</td>
+          <td>0</td>
+          <td>161.0</td>
+          <td>10</td>
+          <td>17</td>
+          <td>4</td>
+          <td>1</td>
+          <td>2</td>
+          <td>0</td>
+          <td>0</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>98</td>
+          <td>2</td>
+          <td>121.5</td>
+          <td>7</td>
+          <td>16</td>
+          <td>4</td>
+          <td>1</td>
+          <td>1</td>
+          <td>0</td>
+          <td>0</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>433</td>
+          <td>0</td>
+          <td>70.0</td>
+          <td>9</td>
+          <td>8</td>
+          <td>3</td>
+          <td>3</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>195</td>
+          <td>0</td>
+          <td>72.25</td>
+          <td>8</td>
+          <td>8</td>
+          <td>3</td>
+          <td>5</td>
+          <td>2</td>
+          <td>0</td>
+          <td>0</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>188</td>
+          <td>0</td>
+          <td>130.0</td>
+          <td>6</td>
+          <td>15</td>
+          <td>3</td>
+          <td>2</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>74</td>
+          <td>1</td>
+          <td>112.5</td>
+          <td>4</td>
+          <td>6</td>
+          <td>4</td>
+          <td>3</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>273</td>
+          <td>0</td>
+          <td>95.0</td>
+          <td>5</td>
+          <td>13</td>
+          <td>3</td>
+          <td>2</td>
+          <td>1</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>0</td>
+          <td>66.3</td>
+          <td>12</td>
+          <td>15</td>
+          <td>4</td>
+          <td>3</td>
+          <td>1</td>
+          <td>0</td>
+          <td>3</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>89</td>
+          <td>1</td>
+          <td>83.66</td>
+          <td>3</td>
+          <td>21</td>
+          <td>4</td>
+          <td>5</td>
+          <td>2</td>
+          <td>0</td>
+          <td>0</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>56</td>
+          <td>1</td>
+          <td>180.0</td>
+          <td>3</td>
+          <td>20</td>
+          <td>4</td>
+          <td>0</td>
+          <td>2</td>
+          <td>5</td>
+          <td>0</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>103</td>
+          <td>1</td>
+          <td>114.3</td>
+          <td>7</td>
+          <td>12</td>
+          <td>4</td>
+          <td>5</td>
+          <td>1</td>
+          <td>0</td>
+          <td>0</td>
+          <td>1</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div style="margin-top: 1.3em">
+    <h3 style="font-size: 1.1em">Field Encodings (for categorical columns):</h3>
+    <ul style="margin: 0 0 0 1.5em; padding: 0">
+      <li>
+        <b>type_of_meal_plan</b>: 0 = Meal Plan 1, 1 = Meal Plan 2, 2 = Meal
+        Plan 3, 3 = Not Selected
+      </li>
+      <li>
+        <b>room_type_reserved</b>: 0 = Room_Type 1, 1 = Room_Type 2, 2 =
+        Room_Type 3, 3 = Room_Type 4, 4 = Room_Type 5, 5 = Room_Type 6, 6 =
+        Room_Type 7
+      </li>
+      <li>
+        <b>market_segment_type</b>: 0 = Aviation, 1 = Complementary, 2 =
+        Corporate, 3 = Offline, 4 = Online
+      </li>
+      <li><b>booking_status</b>: 0 = Canceled, 1 = Not_Canceled</li>
+    </ul>
+  </div>
+</div>
+{% endblock %}

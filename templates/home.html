@@ -1,0 +1,22 @@
+{% extends "base.html" %} {% block title %}Home | HotelSys{% endblock %} {%
+block content %}
+<section class="homepage-container">
+  <div class="logo-animate-wrapper">
+    <img
+      src="{{ url_for('static', filename='logo-home.png') }}"
+      class="logo-animate"
+      alt="HotelSys Logo"
+    />
+  </div>
+  <h1>Welcome to HotelSys</h1>
+  <p>Predict your hotel reservation cancellation risk with ease.</p>
+  <div class="home-buttons">
+    <a href="{{ url_for('predict') }}" class="btn-primary"
+      >Predict Reservation</a
+    >
+    <a href="{{ url_for('about') }}" class="btn-secondary"
+      >About This Project</a
+    >
+  </div>
+</section>
+{% endblock %}
