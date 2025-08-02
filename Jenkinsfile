@@ -69,7 +69,7 @@ pipeline{
 
                         gcloud run deploy ml-project\
                             --image=gcr.io/${GCP_PROJECT}/ml-project:latest \
-                            --platform=managed \ 
+                            --platform=managed \
                             --region=us-central1 \
                             --allow=authenticated
                         '''
