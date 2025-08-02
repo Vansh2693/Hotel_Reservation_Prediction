@@ -39,6 +39,10 @@ pipeline{
                         sh '''
                         export PATH=$PATH:${GCLOUD_PATH}
 
+                        echo "Service Account Key Location: ${GOOGLE_APPLICATION_CREDENTIAL}"
+                        echo "Previewing service account key content:"
+                        head -n 20 ${GOOGLE_APPLICATION_CREDENTIAL}
+
                         gcloud auth activate-service-account --key-file=${GOOGLE_APPLICATION_CREDENTIALS}
 
                         gcloud config set project ${GCP_PROJECT}
