@@ -39,10 +39,6 @@ pipeline{
                         sh '''
                         export PATH=$PATH:${GCLOUD_PATH}
 
-                        echo "Service Account Key Location: ${GOOGLE_APPLICATION_CREDENTIAL}"
-                        echo "Previewing service account key content:"
-                        head -n 20 ${GOOGLE_APPLICATION_CREDENTIAL}
-
                         gcloud auth activate-service-account --key-file="${GOOGLE_APPLICATION_CREDENTIALS}"
 
                         gcloud config set project ${GCP_PROJECT}
@@ -52,6 +48,30 @@ pipeline{
                         docker build -t gcr.io/${GCP_PROJECT}/ml-project:latest .
 
                         docker push gcr.io/${GCP_PROJECT}/ml-project:latest 
+                        '''
+                    }
+                }
+            }
+        }
+
+
+        stage('Deploy to Google Cloud Run'){
+            steps{
+                withCredentials([file(credentialsId : 'gcp-key', variable : 'GOOGLE_APPLICATION_CREDENTIALS')]){
+                    script{
+                        echo 'Deploy to Google Cloud Run .......'
+                        sh '''
+                        export PATH=$PATH:${GCLOUD_PATH}
+
+                        gcloud auth activate-service-account --key-file="${GOOGLE_APPLICATION_CREDENTIALS}"
+
+                        gcloud config set project ${GCP_PROJECT}
+
+                        gcloud run deploy ml-project\
+                            --image=gcr.io/${GCP_PROJECT}/ml-project:latest \
+                            --platform=managed \ 
+                            --region=us-central1 \
+                            --allow=authenticated
                         '''
                     }
                 }
