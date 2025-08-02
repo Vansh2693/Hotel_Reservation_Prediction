@@ -43,7 +43,7 @@ pipeline{
                         echo "Previewing service account key content:"
                         head -n 20 ${GOOGLE_APPLICATION_CREDENTIAL}
 
-                        gcloud auth activate-service-account --key-file=${GOOGLE_APPLICATION_CREDENTIALS}
+                        gcloud auth activate-service-account --key-file="${GOOGLE_APPLICATION_CREDENTIALS}"
 
                         gcloud config set project ${GCP_PROJECT}
 
