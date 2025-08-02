@@ -97,8 +97,4 @@ python application.py
 
 Then go to `http://localhost:8080` in your browser.
 
----
 
-## Deployment Link
-
-https://ml-project-335232471159.us-central1.run.app/
